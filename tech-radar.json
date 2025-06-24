@@ -75,5 +75,5 @@
     "quadrant": "tools",
     "isNew": "TRUE",
     "description": "Claude Sonnet is an advanced language model that excels in coding, writing, analysis and visual processing. It's available in the browser, terminal, most major IDEs and even integrates with GitHub Copilot. As of writing, benchmarking shows it outperforms previous models with versions 3.5 and 3.7, including earlier Claude models. It's also adept at interpreting charts and extracting text from images, and it features a developer-focused experience, such as with the Artifacts feature in the browser UI for generating and interacting with dynamic content such as code snippets and HTML designs. We’ve used version 3.5 of Claude Sonnet extensively in software development and found it significantly boosts productivity across various projects. It excels in greenfield projects, particularly in collaborative software design and architectural discussions. While it may be too early to call any AI model stable for coding assistance, Claude Sonnet is among the most reliable models we've worked with. At the time of writing, Claude 3.7 has also been released and is promising, though we’ve not yet fully tested it in production."
-  },
+  }
 ]
