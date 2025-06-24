@@ -1,14 +1,14 @@
 [
   {
     "name": "AI-powered UI testing",
-    "ring": "asses",
+    "ring": "assess",
     "quadrant": "techniques",
     "isNew": "TRUE",
     "description": "New techniques for AI-powered assistance on software teams are emerging beyond just code generation. One area gaining traction is AI-powered UI testing, leveraging LLMs' abilities to interpret graphical user interfaces. There are several approaches to this. One category of tools uses multi-modal LLMs fine-tuned for UI snapshot processing, allowing test scripts written in natural language to navigate an application. Examples in this space include QA.tech or LambdaTests' KaneAI. Another approach, seen in Browser Use, combines multi-modal foundation models with Playwright's insights into a web page's structure rather than relying on fine-tuned models. When integrating AI-powered UI tests into a test strategy, it’s crucial to consider where they provide the most value. These methods can complement manual exploratory testing, and while the non-determinism of LLMs may introduce flakiness, their fuzziness can be an advantage. This could be useful for testing legacy applications with missing selectors or applications that frequently change labels and click paths."
   },
   {
     "name": "Architecture advice process",
-    "ring": "asses",
+    "ring": "assess",
     "quadrant": "techniques",
     "isNew": "TRUE",
     "description": "One of the persistent challenges in large software teams is determining who makes the architectural decisions that shape the evolution of systems. The State of DevOps report reveals that the traditional approach of Architecture Review Boards is counterproductive, often hindering workflow and correlating with low organizational performance. A compelling alternative is an architectural advice process — a decentralized approach where anyone can make any architectural decision, provided they seek advice from those affected and those with relevant expertise. This method enables teams to optimize for flow without compromising architectural quality, both at small and large scales. At first glance, this approach may seem controversial, but practices such as Architecture Decision Records and advisory forums ensure that decisions remain informed, while empowering those closest to the work to make decisions. We’ve seen this model succeed at scale in an increasing number of organizations, including those in highly regulated industries."
@@ -29,7 +29,7 @@
   },
   {
     "name": "MarkItDown",
-    "ring": "asses",
+    "ring": "assess",
     "quadrant": "languages & frameworks",
     "isNew": "TRUE",
     "description": "MarkItDown converts various formats (PDF, HTML, PowerPoint, Word) into Markdown, enhancing text readability and context retention. Since LLMs derive context from formatting cues like headings and sections, Markdown helps preserve structure for better comprehension. In RAG-based applications, our teams used MarkItDown to pre-process documents into Markdown, ensuring logical markers (headers, subsections) remained intact. Before embedding generation, structure-aware chunking helped maintain full section context which improves the clarity of query responses, especially for complex documents. Widely used for documentation, Markdown also makes MarkItDown’s CLI a valuable developer productivity tool."
@@ -43,14 +43,14 @@
   },
   {
     "name": "Gleam",
-    "ring": "asses",
+    "ring": "assess",
     "quadrant": "languages & frameworks",
     "isNew": "TRUE",
     "description": "Erlang/OTP is a powerful platform for building highly concurrent, scalable and fault-tolerant distributed systems. Traditionally, its languages have been dynamically typed, but Gleam introduces type safety at the language level. Built on BEAM, Gleam combines the expressiveness of functional programming with compile-time type safety, reducing run-time errors and improving maintainability. With a modern syntax, it integrates well with the OTP ecosystem, leveraging the strengths of Erlang and Elixir while ensuring strong interoperability. The Gleam community is active and welcoming, and we look forward to its continued development."
   },
   {
     "name": "Software engineering agents",
-    "ring": "asses",
+    "ring": "assess",
     "quadrant": "tools",
     "isNew": "TRUE",
     "description": "Since we last wrote about software engineering agents six months ago, the industry still lacks a shared definition of the term agent. However, a major development has emerged — not in fully autonomous coding agents (which remain unconvincing) but in supervised agentic modes within the IDE. These modes allow developers to drive implementation via chat, with tools not only modifying code in multiple files but also executing commands, running tests and responding to IDE feedback like linting or compile errors. This approach, sometimes called chat-oriented programming (CHOP) or prompt-to-code, keeps developers in control while shifting more responsibility to AI than traditional coding assistants like auto-suggestions. Leading tools in this space include Cursor, Cline and Windsurf, with GitHub Copilot slightly behind but catching up. The usefulness of these agentic modes depends on both the model used (with Claude's Sonnet series the current state of the art) and how well the tool integrates with the IDE to provide a good developer experience. We've found these workflows intriguing and promising, with a notable increase in coding speed. However, keeping problem scopes small helps developers better review AI-generated changes. This works best with low-abstraction prompts and AI-friendly codebases that are well-structured and properly tested. As these modes improve, they’ll also heighten the risk of complacency with AI-generated code. To mitigate this, employ pair programming and other disciplined review practices, especially for production code."
