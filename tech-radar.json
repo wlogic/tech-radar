@@ -1,0 +1,79 @@
+[
+  {
+    "name": "AI-powered UI testing",
+    "ring": "asses",
+    "quadrant": "techniques",
+    "isNew": "TRUE",
+    "description": "New techniques for AI-powered assistance on software teams are emerging beyond just code generation. One area gaining traction is AI-powered UI testing, leveraging LLMs' abilities to interpret graphical user interfaces. There are several approaches to this. One category of tools uses multi-modal LLMs fine-tuned for UI snapshot processing, allowing test scripts written in natural language to navigate an application. Examples in this space include QA.tech or LambdaTests' KaneAI. Another approach, seen in Browser Use, combines multi-modal foundation models with Playwright's insights into a web page's structure rather than relying on fine-tuned models. When integrating AI-powered UI tests into a test strategy, it’s crucial to consider where they provide the most value. These methods can complement manual exploratory testing, and while the non-determinism of LLMs may introduce flakiness, their fuzziness can be an advantage. This could be useful for testing legacy applications with missing selectors or applications that frequently change labels and click paths."
+  },
+  {
+    "name": "Architecture advice process",
+    "ring": "asses",
+    "quadrant": "techniques",
+    "isNew": "TRUE",
+    "description": "One of the persistent challenges in large software teams is determining who makes the architectural decisions that shape the evolution of systems. The State of DevOps report reveals that the traditional approach of Architecture Review Boards is counterproductive, often hindering workflow and correlating with low organizational performance. A compelling alternative is an architectural advice process — a decentralized approach where anyone can make any architectural decision, provided they seek advice from those affected and those with relevant expertise. This method enables teams to optimize for flow without compromising architectural quality, both at small and large scales. At first glance, this approach may seem controversial, but practices such as Architecture Decision Records and advisory forums ensure that decisions remain informed, while empowering those closest to the work to make decisions. We’ve seen this model succeed at scale in an increasing number of organizations, including those in highly regulated industries."
+  },
+  {
+    "name": "GitLab CI/CD",
+    "ring": "adopt",
+    "quadrant": "platforms",
+    "isNew": "FALSE",
+    "description": "GitLab CI/CD has evolved into a fully integrated system within GitLab, covering everything from code integration and testing to deployment and monitoring. It supports complex workflows with features like multi-stage pipelines, caching, parallel execution and auto-scaling runners and is suitable for large-scale projects and complex pipeline needs. We want to highlight its built-in security and compliance tools (such as SAST and DAST analysis) which make it well-suited for use cases with high-compliance requirements. It also integrates seamlessly with Kubernetes, supporting cloud-native workflows, and offers real-time logging, test reports and traceability for enhanced observability."
+  },
+  {
+    "name": "Model Context Protocol (MCP)",
+    "ring": "trial",
+    "quadrant": "platforms",
+    "isNew": "TRUE",
+    "description": "One of the biggest challenges in prompting is ensuring the AI tool has access to all the context relevant to the task. Often, this context already exists within the systems we use all day: wikis, issue trackers, databases or observability systems. Seamless integration between AI tools and these information sources can significantly improve the quality of AI-generated outputs. The Model Context Protocol (MCP), an open standard released by Anthropic, provides a standardized framework for integrating LLM applications with external data sources and tools. It defines MCP servers and clients, where servers access the data sources and clients integrate and use this data to enhance prompts. Many coding assistants have already implemented MCP integration, allowing them to act as MCP clients. MCP servers can be run in two ways: Locally, as a Python or Node process running on the user’s machine, or remotely, as a server that the MCP client connects to via SSE (though we haven't seen any usage of the remote server variant yet). Currently, MCP is primarily used in the first way, with developers cloning open-source MCP server implementations. While locally run servers offer a neat way to avoid third-party dependencies, they remain less accessible to nontechnical users and introduce challenges such as governance and update management. That said, it's easy to imagine how this standard could evolve into a more mature and user-friendly ecosystem in the future."
+  },
+  {
+    "name": "MarkItDown",
+    "ring": "asses",
+    "quadrant": "languages & frameworks",
+    "isNew": "TRUE",
+    "description": "MarkItDown converts various formats (PDF, HTML, PowerPoint, Word) into Markdown, enhancing text readability and context retention. Since LLMs derive context from formatting cues like headings and sections, Markdown helps preserve structure for better comprehension. In RAG-based applications, our teams used MarkItDown to pre-process documents into Markdown, ensuring logical markers (headers, subsections) remained intact. Before embedding generation, structure-aware chunking helped maintain full section context which improves the clarity of query responses, especially for complex documents. Widely used for documentation, Markdown also makes MarkItDown’s CLI a valuable developer productivity tool."
+  },
+  {
+    "name": "OpenTelemetry",
+    "ring": "adopt",
+    "quadrant": "languages & frameworks",
+    "isNew": "TRUE",
+    "description": "OpenTelemetry is quickly becoming the industry standard for observability. The release of the OpenTelemetry protocol (OTLP) specification established a standardized way to handle traces, metrics and logs, reducing the need for multiple integrations or major rewrites as monitoring distributed solutions and interoperability requirements grow. As OpenTelemetry expands to support logs and profiling, OTLP ensures a consistent transport format across all telemetry data, simplifying instrumentation and making full-stack observability more accessible and scalable for microservices architectures. Adopted by vendors like Datadog, New Relic and Grafana, OTLP enables organizations to build flexible, vendor-agnostic observability stacks without being locked into proprietary solutions. It supports gzip and zstd compression, reducing telemetry data size and lowering bandwidth usage — a key advantage for environments handling high volumes of telemetry data. Designed for long-term growth, OTLP ensures OpenTelemetry remains a robust and future-proof standard, solidifying its position as the de-facto choice for telemetry transport."
+  },
+  {
+    "name": "Gleam",
+    "ring": "asses",
+    "quadrant": "languages & frameworks",
+    "isNew": "TRUE",
+    "description": "Erlang/OTP is a powerful platform for building highly concurrent, scalable and fault-tolerant distributed systems. Traditionally, its languages have been dynamically typed, but Gleam introduces type safety at the language level. Built on BEAM, Gleam combines the expressiveness of functional programming with compile-time type safety, reducing run-time errors and improving maintainability. With a modern syntax, it integrates well with the OTP ecosystem, leveraging the strengths of Erlang and Elixir while ensuring strong interoperability. The Gleam community is active and welcoming, and we look forward to its continued development."
+  },
+  {
+    "name": "Software engineering agents",
+    "ring": "asses",
+    "quadrant": "tools",
+    "isNew": "TRUE",
+    "description": "Since we last wrote about software engineering agents six months ago, the industry still lacks a shared definition of the term agent. However, a major development has emerged — not in fully autonomous coding agents (which remain unconvincing) but in supervised agentic modes within the IDE. These modes allow developers to drive implementation via chat, with tools not only modifying code in multiple files but also executing commands, running tests and responding to IDE feedback like linting or compile errors. This approach, sometimes called chat-oriented programming (CHOP) or prompt-to-code, keeps developers in control while shifting more responsibility to AI than traditional coding assistants like auto-suggestions. Leading tools in this space include Cursor, Cline and Windsurf, with GitHub Copilot slightly behind but catching up. The usefulness of these agentic modes depends on both the model used (with Claude's Sonnet series the current state of the art) and how well the tool integrates with the IDE to provide a good developer experience. We've found these workflows intriguing and promising, with a notable increase in coding speed. However, keeping problem scopes small helps developers better review AI-generated changes. This works best with low-abstraction prompts and AI-friendly codebases that are well-structured and properly tested. As these modes improve, they’ll also heighten the risk of complacency with AI-generated code. To mitigate this, employ pair programming and other disciplined review practices, especially for production code."
+  },
+  {
+    "name": "Metabase",
+    "ring": "trial",
+    "quadrant": "tools",
+    "isNew": "TRUE",
+    "description": "Metabase is an open-source analytics and business intelligence tool that allows users to visualize and analyze data from a variety of data sources, including relational and NoSQL databases. The tool helps users create visualizations and reports, organize them into dashboards and easily share insights. It also offers an SDK for embedding interactive dashboards in web applications, matching the theme and style of the application — making it developer-friendly. With both officially supported and community-backed data connectors, Metabase is versatile across data environments. As a lightweight BI tool, our teams find it useful for managing interactive dashboards and reports in their applications."
+  },
+  {
+    "name": "Cursor",
+    "ring": "trial",
+    "quadrant": "tools",
+    "isNew": "TRUE",
+    "description": "We continue to be impressed by the AI-first code editor Cursor, which remains a leader in the competitive AI coding assistance space. Its code context orchestration is very effective, and it supports a wide range of models, including the option to use a custom API key. The Cursor team often comes up with innovative user experience features before the other vendors, and they include an extensive list of context providers in their chat, such as the referencing of git diffs, previous AI conversations, web search, library documentation and MCP integration. Alongside tools like Cline and Windsurf, Cursor also stands out for its strong agentic coding mode. This mode allows developers to guide their implementation directly from an AI chat interface, with the tool autonomously reading and modifying files, as well as executing commands. Additionally, we appreciate Cursor's ability to detect linting and compilation errors in generated code and proactively correct them."
+  },
+  {
+    "name": "Claude Sonnet",
+    "ring": "trial",
+    "quadrant": "tools",
+    "isNew": "TRUE",
+    "description": "Claude Sonnet is an advanced language model that excels in coding, writing, analysis and visual processing. It's available in the browser, terminal, most major IDEs and even integrates with GitHub Copilot. As of writing, benchmarking shows it outperforms previous models with versions 3.5 and 3.7, including earlier Claude models. It's also adept at interpreting charts and extracting text from images, and it features a developer-focused experience, such as with the Artifacts feature in the browser UI for generating and interacting with dynamic content such as code snippets and HTML designs. We’ve used version 3.5 of Claude Sonnet extensively in software development and found it significantly boosts productivity across various projects. It excels in greenfield projects, particularly in collaborative software design and architectural discussions. While it may be too early to call any AI model stable for coding assistance, Claude Sonnet is among the most reliable models we've worked with. At the time of writing, Claude 3.7 has also been released and is promising, though we’ve not yet fully tested it in production."
+  },
+]
